@@ -25,7 +25,7 @@ def event_view(request, year, month, day):
 
 
 
-# def home_view(request):f
+# def home_view(request):
 #     return render(request, 'home/home.html')
 #
 # def about_view(request):
