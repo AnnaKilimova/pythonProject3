@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Услуги{% endblock %}
+
+{% block content %}
+<h1>Наши Услуги</h1>
+
+<!-- Форма пошуку -->
+<form method="get" action="{% url 'services' %}" class="form-inline mb-4">
+    <input type="text" name="search" placeholder="Поиск услуг..." class="form-control mr-2" value="{{ request.GET.search }}">
+    <button type="submit" class="btn btn-primary">Поиск</button>
+</form>
+
+<!-- Перелiк послуг -->
+<ul>
+    {% if filtered_services %}
+        {% for service in filtered_services %}
+            <li><strong>{{ service.name }}</strong> - {{ service.description|truncatechars:50 }}</li>
+        {% endfor %}
+    {% else %}
+        <p>Услуги не найдены.</p>
+    {% endif %}
+</ul>
+
+<p>Всего найдено услуг: {{ filtered_services|length }}</p>
+{% endblock %}
+

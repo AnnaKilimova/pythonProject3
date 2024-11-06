@@ -21,7 +21,7 @@ from django.http import HttpResponse
 #     return HttpResponse(f"Ви переглядаєте профіль користувача: {username}")
 #
 # def event_view(request, year, month, day):
-#     return HttpResponse(f"Дата події: {year}-{month}-{day}")mmm
+#     return HttpResponse(f"Дата події: {year}-{month}-{day}")
 
 
 

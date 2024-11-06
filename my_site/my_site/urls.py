@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),  # перенаправлення до застосунку home
+    path('', include('main.urls')),  # перенаправлення до застосунку main
 ]
